@@ -14,20 +14,24 @@
         android:layout_gravity="fill_horizontal"
         android:text="@string/RadioButton"
         />
-    <CheckBox android:layout_width="wrap_content"
+
+    <CheckBox android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:layout_gravity="fill_horizontal"
         android:text="@string/CheckBox_message"/>
 
 
-    <Switch android:layout_width="wrap_content"
+    <Switch android:id="@+id/switch1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:layout_gravity="fill_horizontal"
         android:text="@string/What_does_it_do"/>
 
     <ImageButton
+        android:id="@+id/image1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"

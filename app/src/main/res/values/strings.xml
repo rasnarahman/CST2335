@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab2</string>
+    <string name="app_name">Lab3</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="login_message">login</string>
@@ -9,6 +9,11 @@
     <string name="CheckBox_message">CheckBox</string>
     <string name="image_to_display">image to display</string>
     <string name="login_name">login name</string>
+    <string name="dialog_message">Want to finish the activity</string>
+    <string name="dialog_title">finish job</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+
 
 
 </resources>
