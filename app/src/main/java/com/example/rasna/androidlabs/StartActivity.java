@@ -11,19 +11,23 @@ import android.widget.Toast;
 public class StartActivity extends Activity {
     String TAG = "activity_start.xml";
     Button startButton;
+    Button startChat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        startButton = (Button)findViewById(R.id.button);
+        startButton = (Button)findViewById(R.id.buttonStart);
+
         buttonClickAction();
+        onClickStartChat();
     }
 
     protected void onSaveInstanceState(Bundle outState)
     {
         super.onSaveInstanceState(outState);
         Log.i(TAG, "onSaveInstanceState");
+
     }
     @Override
     public void onResume(){
@@ -64,7 +68,6 @@ public class StartActivity extends Activity {
                 Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
                 startActivityForResult(intent, 10);
                 onActivityResult(10,10, intent);
-
             }
         });
     }
@@ -77,11 +80,24 @@ public class StartActivity extends Activity {
                 Toast.makeText(this,"my information to share",Toast.LENGTH_LONG).show();
             }
         }
-
-
     }
 
+    public void onClickStartChat(){
+        startChat = (Button)findViewById(R.id.buttonChat);
+        startChat.setPadding(0,100,0,0);
 
+        startChat.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v){
+                Log.i(TAG, "User clicked Start Chat");
+                Intent intent = new Intent(StartActivity.this, ChatWindow.class);
+             
+                startActivityForResult(intent, 10);
+                onActivityResult(10,10, intent);
+            }
+        });
+    }
 
 
 }
