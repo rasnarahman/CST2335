@@ -23,7 +23,7 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper{
             KEY_MESSAGE
     };
     private static final String DATABASE_NAME = "Messages.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 4;
     // creting the table chat_table
     private static final String CREATE_TABLE_CHAT =
             "create table " + CHAT_TABLE + " ( " + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
