@@ -17,6 +17,10 @@
     <string name="button_send">Send</string>
 
     <string name="weather_forecast">  Weather Forecast </string>
+    <string name="cur_temp">Current Temperature </string>
+    <string name="min_temp">Minimum Temperature </string>
+    <string name="max_temp">maximum Temperature </string>
+    <string name="weatherImage">A weather related image</string>
 
 </resources>
 

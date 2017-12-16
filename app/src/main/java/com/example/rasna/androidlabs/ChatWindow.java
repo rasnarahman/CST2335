@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import java.util.ArrayList;
@@ -20,6 +21,8 @@ import java.util.ArrayList;
 public class ChatWindow extends Activity {
 
     protected static final String ACTIVITY_NAME = "ChatWindow";
+    protected FrameLayout fLayout;
+    protected boolean frame;
     String TAG = "activity_chat_window.xml";
     Button sendBtn;
     EditText editTxt;
@@ -28,7 +31,6 @@ public class ChatWindow extends Activity {
     TextView message;
     ChatDatabaseHelper chatHelper;
     ContentValues newValues = new ContentValues();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class ChatWindow extends Activity {
         Resources resources = getResources();
         Context context = getApplicationContext();
         final ListView list = (ListView)findViewById(R.id.listViewChat);
+
+
         messageAdapter = new ChatAdapter( this );
         list.setAdapter (messageAdapter);
         editTxt = (EditText)findViewById(R.id.editTextChat);
@@ -47,6 +51,7 @@ public class ChatWindow extends Activity {
         chatHelper = new ChatDatabaseHelper(context);
         //SQLiteDatabase chatDB = chatHelper.getMdb();
         newValues = new ContentValues();
+
 
 
 
@@ -96,6 +101,7 @@ public class ChatWindow extends Activity {
     private class ChatAdapter extends ArrayAdapter<String>
     {
 
+
         public ChatAdapter(Context ctx) {
             super(ctx, 0);
         }
@@ -106,6 +112,13 @@ public class ChatWindow extends Activity {
 
         public String getItem(int position){
             return storeChat.get(position);
+        }
+
+        public long getItemId(int position){
+
+
+         return 0;
+
         }
 
         public View getView(int position, View convertView, ViewGroup parent){
