@@ -12,7 +12,6 @@ import android.util.Log;
  * Created by rasna on 2017-11-02.
  */
 
-
 public class ChatDatabaseHelper extends SQLiteOpenHelper{
     public static final String CHAT_TABLE = "CHAT_TABLE";
     public static final String KEY_ID = "_id";
@@ -76,11 +75,20 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper{
     public String getMeessageFromCursor(Cursor cursor){
         String msg = cursor.getString(cursor.getColumnIndex(KEY_MESSAGE));
         return msg;
+    }
 
+
+    public int getIdFromCursor(Cursor cursor){
+        int id = cursor.getInt(cursor.getColumnIndex(KEY_ID));
+        return id;
     }
 
     public void insert(ContentValues content){
         mdb.insert(CHAT_TABLE, null, content);
+    }
 
+    public void remove(long id){
+        int deletedRecrod =  mdb.delete(CHAT_TABLE, "_id" + "=" + id, null);
+        Log.i("Deleted ",Integer.toString(deletedRecrod));
     }
 }

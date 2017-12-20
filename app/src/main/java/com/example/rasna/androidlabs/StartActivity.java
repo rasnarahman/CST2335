@@ -23,7 +23,7 @@ public class StartActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         startButton = (Button)findViewById( R.id.buttonStart);
-        startButton.setPadding(0,0,0,100);
+   //     startButton.setPadding(0,0,0,100);
         buttonClickAction();
         onClickStartChat();
         onClickWeather();
