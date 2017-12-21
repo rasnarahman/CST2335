@@ -15,8 +15,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_below="@+id/textView"
+        android:orientation="vertical"
         tools:ignore="UnknownId">
 
     <Button
@@ -38,10 +38,23 @@
             android:id="@+id/button_Weather_forecast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/weather_forecast"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/buttonChat"
-            android:layout_alignParentStart="true" />
+            android:layout_marginTop="8dp"
+            android:text="@string/weather_forecast" />
+
+
+        <Button
+            android:id="@+id/buttonTestToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button_Weather_forecast"
+            android:layout_marginTop="18dp"
+            android:text="Test ToolBar" />
+
+
     </LinearLayout>
 
 </RelativeLayout>

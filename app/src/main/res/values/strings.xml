@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab7</string>
+    <string name="app_name">Lab 8</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="login_message">login</string>
@@ -21,6 +21,17 @@
     <string name="min_temp">Minimum Temperature </string>
     <string name="max_temp">maximum Temperature </string>
     <string name="weatherImage">A weather related image</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="pick_color">Do you want to go back? </string>
+
+    <string name="dialog_fire_missiles">Welcome alert dialog message </string>
 
 </resources>
 

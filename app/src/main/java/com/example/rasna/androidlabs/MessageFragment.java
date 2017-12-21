@@ -44,7 +44,7 @@ public class MessageFragment extends Fragment  {
         if (bundle != null) {
             myMsg = bundle.getString("chatMessage");
             myId = bundle.getInt("Id");
-            //dbID = bundle.getLong("dbId");
+            //dbID = bundle.getLong();
 //            Log.i("MessageFragment", myMsg);
         }
     }
